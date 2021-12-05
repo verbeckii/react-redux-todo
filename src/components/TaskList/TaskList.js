@@ -1,6 +1,6 @@
 import React from 'react';
 import { ListGroup } from "react-bootstrap";
-import Task from './Task';
+import Task from '../Task/Task';
 
 
 const TaskList = ({ tasks }) => {

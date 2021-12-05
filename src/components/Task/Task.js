@@ -1,12 +1,13 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { Form, ListGroup } from "react-bootstrap";
-import { toggleTask, removeTask }  from "../store/actions";
+import { toggleTask, removeTask }  from "../../store/tasks/actions";
 
 
 const Task = ({ task }) => {
   const { id, title, completed } = task;
   const dispatch = useDispatch();
+
   return (
     <ListGroup.Item className={completed && 'task-completed'}>
       <Form.Check
@@ -14,10 +15,10 @@ const Task = ({ task }) => {
         type="checkbox"
         label={title}
         checked={completed}
-        onChange={ () => dispatch(toggleTask(id)) }
+        onChange={ () => dispatch(toggleTask({ id })) }
       />
       <div className="list-group-item-actions">
-        <span onClick={() => dispatch(removeTask(id))}>Remove</span>
+        <span onClick={() => dispatch(removeTask({ id }))}>Remove</span>
       </div>
     </ListGroup.Item>
   )

@@ -25,3 +25,18 @@
 .list-group-item.task-completed .form-check-label {
   text-decoration: line-through;
 }
+
+.add-new-category {
+  margin-top: 10px;
+  text-align: center;
+  color: #566573;
+}
+.add-new-category span {
+  display: inline-block;
+  border-bottom: 1px dashed;
+}
+.add-new-category span:hover {
+  border-bottom: none;
+  cursor: pointer;
+  color: #212529;
+}

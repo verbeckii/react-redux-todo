@@ -1,10 +1,5 @@
-import { createStore } from 'redux';
-import reducer from "./reducer";
+import { configureStore } from "@reduxjs/toolkit";
+import reducer from './rootReducer';
 
 
-const store = createStore(
-  reducer,
-  // for Chrome redux-devTools
-  //window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-);
-export default store;
+export default configureStore({ reducer });
